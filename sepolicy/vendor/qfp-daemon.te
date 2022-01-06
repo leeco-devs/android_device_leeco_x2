@@ -1,5 +1,3 @@
-typeattribute qfp-daemon binder_in_vendor_violators;
-
 binder_call(qfp-daemon, hal_fingerprint_default);
 
 allow qfp-daemon self:socket create_socket_perms;
