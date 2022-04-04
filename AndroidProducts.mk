@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_x2.mk
+    $(LOCAL_DIR)/aosp_x2.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_x2-user \
-    lineage_x2-userdebug \
-    lineage_x2-eng
+    aosp_x2-user \
+    aosp_x2-userdebug \
+    aosp_x2-eng
