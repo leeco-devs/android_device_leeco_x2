@@ -19,6 +19,8 @@ function blob_fixup() {
     vendor/lib64/libqfp-service.so)
         # Hex edit /firmware/image to /vendor/firmware_mnt to delete the outdated rootdir symlinks
         sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
+        # Haxxs to remove captouch
+        sed -i "s|/dev/captouch|/dev/null\x0\x0\x0\x0|g" "${2}"
     esac
 }
 

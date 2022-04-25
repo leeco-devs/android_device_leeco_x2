@@ -15,6 +15,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp=true \
+    persist.qfp.capacitive_enabled=0 \
     persist.qfp.fd_enabled=1 \
     persist.qfp.ssc_enable_island=1 \
     persist.qfp.ssc_fgoff_dil_s1=10 \

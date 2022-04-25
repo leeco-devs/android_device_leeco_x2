@@ -132,7 +132,7 @@ vendor/lib/libcppf.so
 # Fingerprint - from Capricorn
 -vendor/app/QFingerprintService/QFingerprintService.apk|4f5405f39168b7cb59609d47baa9bd1ee9331511
 vendor/bin/qfp-daemon|1bd3fdb98510e6be98a3e447033ee8271bd8cd7b
-vendor/lib64/libqfp-service.so|752a5a429d2258f3b73f7a9d386718ad9168972c
+vendor/lib64/libqfp-service.so|fb78b668927c792c65fdc442a6d5faed4a24b3fe
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|4e98e283bd3e414fb2b6f2525b86d111d58ad857
 
 # Offline charger
