@@ -35,8 +35,8 @@ TARGET_OTA_ASSERT_DEVICE := le_x2,le_x2_india,le_x2_na,LeMax2_CN,LeMax2_NA,LeMax
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
 BOARD_RAMDISK_OFFSET     := 0x02200000
 
-# msm-perf_defconfig plus the LeEco common and x2 config fragments
-TARGET_KERNEL_ADDITIONAL_CONFIG := vendor/leeco/leeco_msm8996-common.conf vendor/leeco/leeco_x2.conf
+# x2 config fragment on top of the LeEco common one from BoardConfigCommon.mk
+TARGET_KERNEL_ADDITIONAL_CONFIG += vendor/leeco/leeco_x2.conf
 
 # Partitions
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 58139029504
