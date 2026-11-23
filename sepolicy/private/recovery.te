@@ -1,0 +1,4 @@
+# Recovery has no health HAL implementation, so GetBatteryInfo() reads the fuel gauge and charger
+# state from the power_supply class directly. The files themselves are already readable via the
+# recovery sysfs_batteryinfo file rule; traversal of the power_supply directories is not.
+allow recovery sysfs_batteryinfo:dir r_dir_perms;
