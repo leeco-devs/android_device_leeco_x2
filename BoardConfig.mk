@@ -32,8 +32,13 @@ TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 TARGET_OTA_ASSERT_DEVICE := le_x2,le_x2_india,le_x2_na,LeMax2_CN,LeMax2_NA,LeMax2_WW,LeMax2,max_plus,LeMaxPro_CN
 
 # Kernel
+# build/make does not read BOARD_KERNEL_TAGS_OFFSET / BOARD_RAMDISK_OFFSET, so
+# feed them to mkbootimg explicitly. The device offsets are needed because the
+# kernel payload is larger than the 0x01000000 ramdisk default: with it the
+# ramdisk lands inside the kernel and LK's memmove clobbers the kernel.
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
 BOARD_RAMDISK_OFFSET     := 0x02200000
+BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
 # x2 config fragment on top of the LeEco common one from BoardConfigCommon.mk
 TARGET_KERNEL_ADDITIONAL_CONFIG += vendor/leeco/leeco_x2.conf
